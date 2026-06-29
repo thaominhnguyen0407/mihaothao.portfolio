@@ -1,0 +1,502 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head></head><body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">```html
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Thao Nguyen | Experience &amp; Toolkit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#735d5e",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#f6d9d9",
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#524343",
+                    "primary": "#855050",
+                    "surface-tint": "#855050",
+                    "on-tertiary-fixed": "#2a1616",
+                    "on-secondary-fixed-variant": "#564242",
+                    "tertiary-fixed": "#ffdad9",
+                    "surface": "#fdf9f5",
+                    "on-background": "#1c1c19",
+                    "surface-container-low": "#f7f3ef",
+                    "surface-container-high": "#ebe7e4",
+                    "surface-container-highest": "#e5e2de",
+                    "on-primary-fixed-variant": "#6a393a",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#dcc0c0",
+                    "tertiary-fixed-dim": "#e3bebe",
+                    "outline": "#847373",
+                    "inverse-on-surface": "#f4f0ec",
+                    "surface-dim": "#ddd9d6",
+                    "secondary-fixed": "#f9dcdc",
+                    "primary-container": "#e8a5a5",
+                    "inverse-surface": "#31302e",
+                    "secondary": "#6f5959",
+                    "on-primary-container": "#6a393a",
+                    "on-surface": "#1c1c19",
+                    "background": "#fdf9f5",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#d6c2c1",
+                    "primary-fixed-dim": "#fab5b5",
+                    "surface-bright": "#fdf9f5",
+                    "tertiary-container": "#d1aeae",
+                    "surface-variant": "#e5e2de",
+                    "inverse-primary": "#fab5b5",
+                    "surface-container": "#f1ede9",
+                    "on-secondary-fixed": "#271718",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#350f11",
+                    "on-tertiary-fixed-variant": "#5a4040",
+                    "tertiary": "#745757",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#5b4141",
+                    "primary-fixed": "#ffdad9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "container-padding": "2rem",
+                    "section-gap": "5rem"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Playfair Display"],
+                    "label-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-lg": ["42px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["60px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .botanical-line {
+            background: linear-gradient(to bottom, transparent, #e8a5a5 15%, #e8a5a5 85%, transparent);
+            width: 1px;
+        }
+        .skill-bar-fill {
+            transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+        .flower-bud {
+            animation: bloom 2s ease-out forwards;
+            opacity: 0;
+            transform: scale(0);
+        }
+        @keyframes bloom {
+            to { opacity: 1; transform: scale(1); }
+        }
+        .organic-shadow {
+            box-shadow: 0 10px 30px -10px rgba(133, 80, 80, 0.1);
+        }
+        
+        /* Interactive Petal Trail Styles from SCREEN_78 */
+        .petal-particle {
+            position: fixed;
+            pointer-events: none;
+            width: 12px;
+            height: 18px;
+            background: #fab5b5;
+            border-radius: 50% 0 50% 50%;
+            opacity: 0.6;
+            z-index: 9999;
+            transform-origin: center;
+        }
+    </style>
+<div id="petal-container"></div>
+<!-- Top Navigation Bar - Synchronized with SCREEN_78 -->
+<nav class="sticky top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-primary/10 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tighter text-on-background active:scale-95 transition-transform" href="#">Thao Nguyen</a>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#">Home</a>
+<a class="font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#">Work</a>
+<a class="font-label-md uppercase text-primary font-bold transition-colors tracking-widest" href="#">Experience</a>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md uppercase tracking-wider hover:opacity-80 transition-all duration-300 active:scale-95">Connect</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-12 pb-section-gap">
+<div class="max-w-7xl mx-auto px-container-padding">
+<!-- Section Header -->
+<header class="mb-24 relative flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div>
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl -z-10"></div>
+<p class="font-label-md text-label-md text-primary uppercase tracking-widest mb-4">the proof</p>
+<h1 class="font-headline-xl text-4xl md:text-headline-xl text-on-surface max-w-4xl leading-tight">My Professional Journey</h1>
+</div>
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden organic-shadow border-4 border-white rotate-3 flex-shrink-0">
+<img alt="Thao Nguyen" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmJsIvg9CD1c2S74xqL_6IDXTB3_ieYzYHE7nBy93TR7yjnPPCoLHOSzUQUyphWgF1qrBi5mv8tjyECuWMyA7N2lbscvPgx5jOXpov0u-wBvnNJ8dlZyTzq9lmRqVCNAHg6QEjLGgZvhDcNQ2aUjcvyC5SsZL4NK2g1sVOO_Cw1ftTumYzrPh6fUFclylpOyzXYIj22KpgZk4pSv4grFuw9VK-s_Sr7S70wmlGN2oB0lYzlb9PFpRNssgr17vq5m3Z0XVP2sd_WGaF">
+</div>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left: Kinetic Vertical Timeline -->
+<div class="lg:col-span-7 relative pr-8">
+<h2 class="font-headline-md text-headline-md mb-12 flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-primary/60" style="font-variation-settings: 'FILL' 1;">spa</span>
+                    Experience
+                </h2>
+<div class="relative pl-12">
+<div class="absolute left-4 top-0 bottom-0 botanical-line flex flex-col justify-between items-center py-8">
+<div class="w-2.5 h-2.5 bg-primary-container rounded-full ring-[6px] ring-background flex items-center justify-center">
+<div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+</div>
+<div class="w-2 h-2 bg-tertiary-container/40 rounded-full flower-bud"></div>
+<div class="w-2.5 h-2.5 bg-primary-container rounded-full ring-[6px] ring-background flex items-center justify-center">
+<div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+</div>
+<div class="w-2 h-2 bg-secondary-container/40 rounded-full flower-bud"></div>
+<div class="w-2.5 h-2.5 bg-primary-container rounded-full ring-[6px] ring-background flex items-center justify-center">
+<div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+</div>
+<div class="w-2 h-2 bg-tertiary-container/40 rounded-full flower-bud"></div>
+<div class="w-2.5 h-2.5 bg-primary-container rounded-full ring-[6px] ring-background flex items-center justify-center">
+<div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+</div>
+<div class="w-2 h-2 bg-secondary-container/40 rounded-full flower-bud"></div>
+<div class="w-2.5 h-2.5 bg-primary-container rounded-full ring-[6px] ring-background flex items-center justify-center">
+<div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+</div>
+</div>
+<div class="space-y-16">
+<article class="group relative">
+<div class="absolute -left-[53px] top-1">
+<span class="material-symbols-outlined text-primary bg-background px-1 text-xl">psychology</span>
+</div>
+<span class="font-label-md text-label-md text-primary/60 mb-1 block font-bold uppercase tracking-widest">June 2026 — Present</span>
+<h3 class="font-headline-md text-xl text-on-surface mb-1 group-hover:text-primary transition-colors">Ogilvy</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-3">Social Strategy Intern</p>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xl">
+                                Developing strategic recommendations across content planning, reporting, and product line launch campaigns for Premier Protein. Built a feedback-tracking system streamlining cross-team collaboration.
+                            </p>
+</article>
+<article class="group relative">
+<div class="absolute -left-[53px] top-1">
+<span class="material-symbols-outlined text-primary bg-background px-1 text-xl">eco</span>
+</div>
+<span class="font-label-md text-label-md text-primary/60 mb-1 block font-bold uppercase tracking-widest">Dec 2025 — Present</span>
+<h3 class="font-headline-md text-xl text-on-surface mb-1 group-hover:text-primary transition-colors">Bloom in Crisis</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-3">Brand &amp; Marketing Associate</p>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xl">
+                                Leading community-focused marketing initiatives. Contributed to a significant increase in Instagram reach and LinkedIn engagement through strategic brand alignment.
+                            </p>
+</article>
+<article class="group relative">
+<div class="absolute -left-[53px] top-1">
+<span class="material-symbols-outlined text-primary bg-background px-1 text-xl">campaign</span>
+</div>
+<span class="font-label-md text-label-md text-primary/60 mb-1 block font-bold uppercase tracking-widest">Oct 2025 — Dec 2025</span>
+<h3 class="font-headline-md text-xl text-on-surface mb-1 group-hover:text-primary transition-colors">The Door</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-3">Social Media &amp; Influencer Marketing Intern</p>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xl">
+                                Supported influencer campaigns for national brands like Carbone Fine Food. Evaluated hundreds of influencers using CreatorIQ and concepted major social content assets.
+                            </p>
+</article>
+<article class="group relative">
+<div class="absolute -left-[53px] top-1">
+<span class="material-symbols-outlined text-primary bg-background px-1 text-xl">brush</span>
+</div>
+<span class="font-label-md text-label-md text-primary/60 mb-1 block font-bold uppercase tracking-widest">June 2025 — Nov 2025</span>
+<h3 class="font-headline-md text-xl text-on-surface mb-1 group-hover:text-primary transition-colors">BEAT Network</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-3">Branding Intern</p>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xl">
+                                Contributed to brand strategy across a media ecosystem of 70+ channels. Managed a successful TikTok relaunch strategy, achieving rapid follower growth.
+                            </p>
+</article>
+<article class="group relative">
+<div class="absolute -left-[53px] top-1">
+<span class="material-symbols-outlined text-primary bg-background px-1 text-xl">insights</span>
+</div>
+<span class="font-label-md text-label-md text-primary/60 mb-1 block font-bold uppercase tracking-widest">Feb 2025 — May 2025</span>
+<h3 class="font-headline-md text-xl text-on-surface mb-1 group-hover:text-primary transition-colors">Root Access</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-3">Marketing Strategy Intern</p>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xl">
+                                Advanced pre-launch branding for a venture-backed AI startup. Developed high-performing Webflow landing pages and designed engagement-driven content.
+                            </p>
+</article>
+<article class="group relative">
+<div class="absolute -left-[53px] top-1">
+<span class="material-symbols-outlined text-primary bg-background px-1 text-xl">settings_account_box</span>
+</div>
+<span class="font-label-md text-label-md text-primary/60 mb-1 block font-bold uppercase tracking-widest">May 2024 — Aug 2024</span>
+<h3 class="font-headline-md text-xl text-on-surface mb-1 group-hover:text-primary transition-colors">Eurowindow</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-3">Marketing Operations Coordinator Intern</p>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xl">
+                                Vetted vendors for high-budget projects and leveraged SAP to improve procurement efficiency and supplier performance reviews.
+                            </p>
+</article>
+</div>
+</div>
+</div>
+<!-- Right Column -->
+<div class="lg:col-span-5 space-y-12">
+<!-- Education Section -->
+<div class="bg-surface-container-low p-10 md:p-14 rounded-xl organic-shadow border border-white/50 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 opacity-10 -mr-8 -mt-8 rotate-12 pointer-events-none">
+<span class="material-symbols-outlined text-9xl text-primary">school</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-8 text-on-surface">Education</h2>
+<div class="space-y-4">
+<h4 class="font-headline-md text-xl text-on-surface">Fordham Gabelli School of Business</h4>
+<p class="font-body-md text-on-surface-variant">Bachelor's Degree in Marketing</p>
+<p class="font-label-md text-primary font-bold uppercase tracking-widest">Aug 2023 — May 2027</p>
+</div>
+</div>
+<!-- Honors & Fellowships Section -->
+<div class="bg-primary/5 p-10 md:p-14 rounded-xl border border-primary/10 organic-shadow">
+<h2 class="font-headline-md text-headline-md mb-8 text-on-surface">Honors &amp; Fellowships</h2>
+<div class="space-y-8">
+<div class="flex items-start gap-4 group">
+<div class="w-12 h-12 rounded-full bg-white flex-shrink-0 flex items-center justify-center text-primary organic-shadow transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined">award_star</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface font-bold text-lg mb-1">Fordham’s Marketing Scholar</h4>
+<p class="text-body-md text-on-surface-variant leading-relaxed">Selected as 1 of 40 students for a competitive, high-profile marketing career development program.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 group">
+<div class="w-12 h-12 rounded-full bg-white flex-shrink-0 flex items-center justify-center text-primary organic-shadow transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined">diversity_3</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface font-bold text-lg mb-1">4A’s MAIP Fellow</h4>
+<p class="text-body-md text-on-surface-variant leading-relaxed">Selected for the 4A's Multicultural Advertising Intern Program, a nationally competitive fellowship preparing students for careers in advertising and marketing.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Certifications Block -->
+<div class="bg-white/40 p-10 md:p-14 rounded-xl border border-primary/10 organic-shadow">
+<h2 class="font-headline-md text-headline-md mb-8 text-on-surface">Certifications</h2>
+<div class="grid grid-cols-1 gap-6">
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-white flex-shrink-0 flex items-center justify-center text-primary organic-shadow transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-xl">verified</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface font-bold">Bloomberg Market Concepts</h4>
+<p class="text-xs text-on-surface-variant">Bloomberg LP</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-white flex-shrink-0 flex items-center justify-center text-primary organic-shadow transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-xl">workspace_premium</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface font-bold">INSIDE LVMH</h4>
+<p class="text-xs text-on-surface-variant">LVMH</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-white flex-shrink-0 flex items-center justify-center text-primary organic-shadow transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-xl">school</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface font-bold">ANA Certified Marketing Student</h4>
+<p class="text-xs text-on-surface-variant">Association of National Advertisers</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Recommendation -->
+<div class="p-8 border border-primary/10 bg-white/60 rounded-lg organic-shadow">
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">"Any company or organization would be incredibly lucky to have this talented young lady on their team... Her positive energy, thoughtfulness, and authenticity uplift everyone she meets."</p>
+<div class="mt-6 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed-dim flex items-center justify-center font-bold text-on-secondary-fixed text-sm">ZN</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Zip Nguyen</p>
+<p class="text-xs text-on-surface-variant">Founder &amp; CQO at Bloom in Crisis</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Toolkit Section -->
+<section class="mt-32">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b border-on-surface/5 pb-10">
+<h2 class="font-headline-xl text-4xl text-on-surface">Toolkit</h2>
+</div>
+<div class="space-y-12">
+<!-- Data & Analytics -->
+<div class="space-y-6">
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-widest">Data &amp; Analytics</h3>
+<div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4">
+<div class="group p-4 bg-surface-container-low/50 rounded-lg border border-on-surface/5 hover:border-primary/20 hover:bg-white hover:scale-[1.05] transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center organic-shadow h-32">
+<span class="material-symbols-outlined text-2xl text-primary/60">table_view</span>
+<p class="font-label-md text-[12px] text-on-surface font-bold leading-tight">Excel</p>
+</div>
+<div class="group p-4 bg-surface-container-low/50 rounded-lg border border-on-surface/5 hover:border-primary/20 hover:bg-white hover:scale-[1.05] transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center organic-shadow h-32">
+<span class="material-symbols-outlined text-2xl text-primary/60">terminal</span>
+<p class="font-label-md text-[12px] text-on-surface font-bold leading-tight">Python</p>
+</div>
+<div class="group p-4 bg-surface-container-low/50 rounded-lg border border-on-surface/5 hover:border-primary/20 hover:bg-white hover:scale-[1.05] transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center organic-shadow h-32">
+<span class="material-symbols-outlined text-2xl text-primary/60">functions</span>
+<p class="font-label-md text-[12px] text-on-surface font-bold leading-tight">SPSS</p>
+</div>
+<div class="group p-4 bg-surface-container-low/50 rounded-lg border border-on-surface/5 hover:border-primary/20 hover:bg-white hover:scale-[1.05] transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center organic-shadow h-32">
+<span class="material-symbols-outlined text-2xl text-primary/60">poll</span>
+<p class="font-label-md text-[12px] text-on-surface font-bold leading-tight">Qualtrics</p>
+</div>
+<div class="group p-4 bg-surface-container-low/50 rounded-lg border border-on-surface/5 hover:border-primary/20 hover:bg-white hover:scale-[1.05] transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center organic-shadow h-32">
+<span class="material-symbols-outlined text-2xl text-primary/60">database</span>
+<p class="font-label-md text-[12px] text-on-surface font-bold leading-tight">SAP</p>
+</div>
+</div>
+</div>
+<!-- Creative Suite -->
+<div class="space-y-6">
+<h3 class="font-label-md text-label-md text-secondary uppercase tracking-widest">Creative Suite</h3>
+<div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4">
+<div class="group p-4 bg-surface-container-low/50 rounded-lg border border-on-surface/5 hover:border-primary/20 hover:bg-white hover:scale-[1.05] transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center organic-shadow h-32">
+<span class="material-symbols-outlined text-2xl text-primary/60">photo_library</span>
+<p class="font-label-md text-[12px] text-on-surface font-bold leading-tight">Adobe Suite</p>
+</div>
+<div class="group p-4 bg-surface-container-low/50 rounded-lg border border-on-surface/5 hover:border-primary/20 hover:bg-white hover:scale-[1.05] transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center organic-shadow h-32">
+<span class="material-symbols-outlined text-2xl text-primary/60">polyline</span>
+<p class="font-label-md text-[12px] text-on-surface font-bold leading-tight">Figma</p>
+</div>
+<div class="group p-4 bg-surface-container-low/50 rounded-lg border border-on-surface/5 hover:border-primary/20 hover:bg-white hover:scale-[1.05] transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center organic-shadow h-32">
+<span class="material-symbols-outlined text-2xl text-primary/60">design_services</span>
+<p class="font-label-md text-[12px] text-on-surface font-bold leading-tight">Canva</p>
+</div>
+<div class="group p-4 bg-surface-container-low/50 rounded-lg border border-on-surface/5 hover:border-primary/20 hover:bg-white hover:scale-[1.05] transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center organic-shadow h-32">
+<span class="material-symbols-outlined text-2xl text-primary/60">movie_edit</span>
+<p class="font-label-md text-[12px] text-on-surface font-bold leading-tight">CapCut</p>
+</div>
+</div>
+</div>
+<!-- Social & Marketing -->
+<div class="space-y-6">
+<h3 class="font-label-md text-label-md text-tertiary uppercase tracking-widest">Social &amp; Marketing</h3>
+<div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4">
+<div class="group p-4 bg-surface-container-low/50 rounded-lg border border-on-surface/5 hover:border-primary/20 hover:bg-white hover:scale-[1.05] transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center organic-shadow h-32">
+<span class="material-symbols-outlined text-2xl text-primary/60">mail</span>
+<p class="font-label-md text-[12px] text-on-surface font-bold leading-tight">Mailchimp</p>
+</div>
+<div class="group p-4 bg-surface-container-low/50 rounded-lg border border-on-surface/5 hover:border-primary/20 hover:bg-white hover:scale-[1.05] transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center organic-shadow h-32">
+<span class="material-symbols-outlined text-2xl text-primary/60">newspaper</span>
+<p class="font-label-md text-[12px] text-on-surface font-bold leading-tight">Muck Rack</p>
+</div>
+<div class="group p-4 bg-surface-container-low/50 rounded-lg border border-on-surface/5 hover:border-primary/20 hover:bg-white hover:scale-[1.05] transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center organic-shadow h-32">
+<span class="material-symbols-outlined text-2xl text-primary/60">camera_alt</span>
+<p class="font-label-md text-[12px] text-on-surface font-bold leading-tight">Instagram</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer - Synchronized with SCREEN_78 -->
+<footer class="w-full bg-surface-container py-12 px-margin-mobile md:px-margin-desktop border-t border-primary/5">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-headline-lg text-primary text-[28px] tracking-tight">Thao Nguyen</div>
+<p class="font-body-md text-on-surface-variant">© 2024 Thao Nguyen — Strategic Precision &amp; Organic Growth</p>
+<div class="flex gap-10">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Work</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Insights</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Connect</a>
+</div>
+</div>
+</footer>
+<script>
+    // Intersection Observers for visual effects
+    const observerOptions = { threshold: 0.2 };
+    
+    const buds = document.querySelectorAll('.flower-bud');
+    const budObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('flower-bud'); 
+            }
+        });
+    }, observerOptions);
+    
+    buds.forEach(bud => budObserver.observe(bud));
+
+    // Interactive Petal Trail Effect from SCREEN_78
+    const petalContainer = document.getElementById('petal-container');
+    let lastX = 0;
+    let lastY = 0;
+    const distanceThreshold = 40; 
+
+    window.addEventListener('mousemove', (e) => {
+        const dx = e.clientX - lastX;
+        const dy = e.clientY - lastY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance > distanceThreshold) {
+            createPetal(e.clientX, e.clientY);
+            lastX = e.clientX;
+            lastY = e.clientY;
+        }
+    });
+
+    function createPetal(x, y) {
+        const petal = document.createElement('div');
+        petal.className = 'petal-particle';
+        
+        const size = Math.random() * 10 + 8;
+        const rotation = Math.random() * 360;
+        const driftX = (Math.random() - 0.5) * 50;
+        const driftY = (Math.random() - 0.5) * 50;
+        
+        petal.style.width = `${size}px`;
+        petal.style.height = `${size * 1.5}px`;
+        petal.style.left = `${x}px`;
+        petal.style.top = `${y}px`;
+        petal.style.transform = `rotate(${rotation}deg)`;
+        petal.style.background = `rgba(232, 165, 165, ${0.4 + Math.random() * 0.4})`;
+
+        petalContainer.appendChild(petal);
+
+        petal.animate([
+            { transform: `translate(0, 0) rotate(${rotation}deg)`, opacity: 0.8 },
+            { transform: `translate(${driftX}px, ${driftY}px) rotate(${rotation + 90}deg)`, opacity: 0 }
+        ], {
+            duration: 1000,
+            easing: 'ease-out'
+        });
+
+        setTimeout(() => {
+            petal.remove();
+        }, 1000);
+    }
+</script>
+```
+
+</body></html>

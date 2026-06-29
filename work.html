@@ -1,0 +1,820 @@
+<!DOCTYPE html><html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Intel Hub | Thao Nguyen</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#e3bebe",
+                        "secondary-container": "#f6d9d9",
+                        "on-primary-fixed-variant": "#6a393a",
+                        "surface": "#fdf9f5",
+                        "primary-container": "#e8a5a5",
+                        "outline-variant": "#d6c2c1",
+                        "on-secondary-fixed-variant": "#564242",
+                        "surface-container-highest": "#e5e2de",
+                        "primary-fixed": "#ffdad9",
+                        "on-surface-variant": "#524343",
+                        "tertiary-fixed": "#ffdad9",
+                        "inverse-on-surface": "#f4f0ec",
+                        "surface-tint": "#855050",
+                        "surface-container-high": "#ebe7e4",
+                        "surface-dim": "#ddd9d6",
+                        "tertiary": "#745757",
+                        "secondary": "#6f5959",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#735d5e",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#dcc0c0",
+                        "on-primary-fixed": "#350f11",
+                        "on-tertiary-fixed": "#2a1616",
+                        "inverse-surface": "#31302e",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e5e2de",
+                        "on-surface": "#1c1c19",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#6a393a",
+                        "on-background": "#1c1c19",
+                        "surface-container": "#f1ede9",
+                        "outline": "#847373",
+                        "background": "#fdf9f5",
+                        "tertiary-container": "#d1aeae",
+                        "primary-fixed-dim": "#fab5b5",
+                        "on-tertiary-container": "#5b4141",
+                        "surface-container-low": "#f7f3ef",
+                        "on-secondary-fixed": "#271718",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fdf9f5",
+                        "on-tertiary-fixed-variant": "#5a4040",
+                        "inverse-primary": "#fab5b5",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#f9dcdc",
+                        "primary": "#855050",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["60px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["42px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .organic-bg {
+            background-image: radial-gradient(circle at 10% 20%, rgba(133, 80, 80, 0.05) 0%, transparent 40%),
+                              radial-gradient(circle at 90% 80%, rgba(246, 217, 217, 0.1) 0%, transparent 40%);
+        }
+        .filter-underline {
+            position: relative;
+        }
+        .filter-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: currentColor;
+            transition: width 0.3s ease;
+        }
+        .filter-underline:hover::after {
+            width: 100%;
+        }
+        .insight-highlight {
+            background-color: #f6d9d933;
+            border-left: 4px solid #855050;
+        }
+        .cta-button-shadow {
+            box-shadow: 0 10px 20px -10px rgba(133, 80, 80, 0.4);
+        }
+        .stylized-heading {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        .case-slider-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding-bottom: 24px;
+            -webkit-overflow-scrolling: touch;
+        }
+        .case-slider-container::-webkit-scrollbar {
+            display: none;
+        }
+        .case-slide {
+            flex: 0 0 90%;
+            scroll-snap-align: center;
+            padding: 0 12px;
+        }
+        @media (min-width: 1024px) {
+            .case-slide {
+                flex: 0 0 85%;
+            }
+        }
+        .petal-particle {
+            position: fixed;
+            pointer-events: none;
+            width: 12px;
+            height: 18px;
+            background: #fab5b5;
+            border-radius: 50% 0 50% 50%;
+            opacity: 0.6;
+            z-index: 9999;
+            transform-origin: center;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden organic-bg">
+<div id="petal-container"></div>
+<!-- Top Navigation Bar synced with SCREEN_78 -->
+<nav class="sticky top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-primary/10 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tighter text-on-background active:scale-95 transition-transform" href="#">Thao Nguyen</a>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#">Home</a>
+<a class="font-label-md uppercase text-primary border-b border-primary transition-colors tracking-widest" href="#">Work</a>
+<a class="font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#">Experience</a>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md uppercase tracking-wider hover:opacity-80 transition-all duration-300 active:scale-95">Connect</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Header Section -->
+<header class="mb-20 relative">
+<div class="flex flex-col md:flex-row gap-12 items-end">
+<div class="flex-grow">
+<div class="inline-block px-6 py-2 mb-8 bg-secondary-container text-on-secondary-container rounded-full font-label-md text-label-md uppercase tracking-widest shadow-sm">
+                        Intel Hub
+                    </div>
+<h1 class="font-headline-xl text-headline-xl max-w-4xl leading-tight">
+                        Case Studies: <span class="stylized-heading font-normal">Strategic Precision</span> meets Organic Design.
+                    </h1>
+</div>
+<div class="w-full md:w-1/3 lg:w-1/4 shrink-0">
+<div class="relative group aspect-[4/5] overflow-hidden rounded-lg shadow-xl">
+<img alt="Thao Nguyen Portrait" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc4o3ezxGDfDX-JJmETJnwwLahwh_pF2ZgOLxmOmn4yqrVV5ab_pvi1CdtfwFjJC16S-OZv6uc8GuDQB6RUZqZjQOMmSM2Lwf68TohT9KpTgacBDcrc9myWffv7rGRvNjaLN_MHUldeQeE-LaRupxxstuVGnYgBpr3CPeilHNPElrz42c5PdZwYZIMw6Q4Bkj-9yXogsJw3WYbR0dl0Gzvto9v14BGwJyfTl075i557RAjxXk2DZh9TUDe5MSXm0Iqdh4V0b7vozGO">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+</div>
+</div>
+</header>
+<div class="flex flex-col gap-12">
+<!-- Filter Strip -->
+<div class="flex flex-wrap gap-x-8 gap-y-4 items-center justify-between border-b border-outline/10 pb-6">
+<div class="flex gap-8 overflow-x-auto no-scrollbar">
+<button class="filter-underline text-body-md opacity-100 font-bold whitespace-nowrap">All Research</button>
+<button class="filter-underline text-body-md opacity-60 hover:opacity-100 transition-opacity whitespace-nowrap">Brand Strategy</button>
+<button class="filter-underline text-body-md opacity-60 hover:opacity-100 transition-opacity whitespace-nowrap">Data Analytics</button>
+<button class="filter-underline text-body-md opacity-60 hover:opacity-100 transition-opacity whitespace-nowrap">Cultural Marketing</button>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[20px]">swipe</span>
+                    Swipe to explore projects
+                </div>
+</div>
+<!-- Horizontal Slider - 10 Detailed Cases -->
+<div class="case-slider-container -mx-3">
+<!-- Case 01: Head & Shoulders -->
+<div class="case-slide">
+<article class="bg-surface-container-lowest border border-outline/10 p-8 md:p-12 rounded-lg h-full shadow-sm hover:shadow-md transition-all">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<div class="lg:col-span-5 space-y-6 border-r border-outline/10 pr-0 lg:pr-10">
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">01</span>
+<span class="px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Consumer Research</span>
+<span class="px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Solo Project</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg leading-tight">P&amp;G: Head &amp; Shoulders — Gen Z Has a <span class="stylized-heading font-normal">Gender Problem</span></h2>
+<p class="text-body-md text-on-surface-variant">Primary mixed-methods research exposing how beauty standards and informal trial behavior drive Gen Z's quiet abandonment of H&amp;S.</p>
+<div class="insight-highlight p-6 rounded-r-lg">
+<h4 class="font-label-md text-label-md text-primary uppercase mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+                                        The Insight
+                                    </h4>
+<p class="text-body-md text-on-surface italic leading-relaxed">
+                                        "H&amp;S becomes Gen Z's first anti-dandruff shampoo because mothers choose it — not the user. Gen Z isn't brand-loyal — they're bottle-locked."
+                                    </p>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 py-2">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">The Challenge</h4>
+<p class="text-body-md text-on-surface-variant text-sm">H&amp;S leads global anti-dandruff but faces a threat: Gen Z females abandon the brand perceived as masculine and clinical. It's a parent's product, not a personal choice.</p>
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2 mt-6">The Strategy</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Reposition from "anti-dandruff shampoo" to confidence-restoring scalp care. Soft &amp; Pure (Female Beauty Seeker) and Active Clean (Male Quick Fixer).</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">Results &amp; KPI</h4>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">+25%</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Purchase Intent</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">+40%</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Trial via Minis</span>
+</div>
+</div>
+<a class="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-primary text-on-primary rounded-full font-label-md text-label-md transition-all hover:opacity-90 cta-button-shadow w-full justify-center" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+                                        Case Study
+                                    </a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Case 02: Instagram Algorithm -->
+<div class="case-slide">
+<article class="bg-surface-container-lowest border border-outline/10 p-8 md:p-12 rounded-lg h-full shadow-sm hover:shadow-md transition-all">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<div class="lg:col-span-5 space-y-6 border-r border-outline/10 pr-0 lg:pr-10">
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">02</span>
+<span class="px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Data Analytics</span>
+<span class="px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Team Project</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg leading-tight">Cracking the <span class="stylized-heading font-normal">Algorithm</span> — Instagram Study</h2>
+<p class="text-body-md text-on-surface-variant">OLS regression analysis of 5,994 posts revealing that engagement and growth require fundamentally opposite content strategies.</p>
+<div class="insight-highlight p-6 rounded-r-lg">
+<h4 class="font-label-md text-label-md text-primary uppercase mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+                                        The Insight
+                                    </h4>
+<p class="text-body-md text-on-surface italic leading-relaxed">
+                                        "Engagement and follower growth are not the same — hashtags hurt ER but help growth. Creator size sets the floor; strategy sets the ceiling."
+                                    </p>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 py-2">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">The Challenge</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Strategists rely on intuition. Goal: isolate true statistical drivers from noise across 5,994 posts and 41 distinct variables.</p>
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2 mt-6">The Strategy</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Dual OLS models using Python NLP. Differentiated playbooks for Small vs Large creators based on statistical significance of content types.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">Results &amp; KPI</h4>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">47.9%</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">ER Model R²</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">+0.029</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Giveaway ER Lift</span>
+</div>
+</div>
+<a class="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-primary text-on-primary rounded-full font-label-md text-label-md transition-all hover:opacity-90 cta-button-shadow w-full justify-center" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+                                        Case Study
+                                    </a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Case 03: Chiếu Chèo -->
+<div class="case-slide">
+<article class="bg-surface-container-lowest border border-outline/10 p-8 md:p-12 rounded-lg h-full shadow-sm hover:shadow-md transition-all">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<div class="lg:col-span-5 space-y-6 border-r border-outline/10 pr-0 lg:pr-10">
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">03</span>
+<span class="px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Cultural Marketing</span>
+<span class="px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Peaking Point 2024</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg leading-tight">Chiếu Chèo — Reviving <span class="stylized-heading font-normal">Vietnamese Opera</span></h2>
+<p class="text-body-md text-on-surface-variant">Integrated campaign bringing 10th-century Vietnamese Chèo art into Gen Z culture through TikTok trends and immersive experiences.</p>
+<div class="insight-highlight p-6 rounded-r-lg">
+<h4 class="font-label-md text-label-md text-primary uppercase mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+                                        The Insight
+                                    </h4>
+<p class="text-body-md text-on-surface italic leading-relaxed">
+                                        "Gen Z isn't rejecting Chèo because it's boring — they're rejecting the curriculum version. Unlock: Chèo is satire and critique. It was cancelled before cancellation existed."
+                                    </p>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 py-2">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">The Challenge</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Generational disconnection in major cities. Young people feel it's museum-only. Needs emotional relevance and urban engagement.</p>
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2 mt-6">The Strategy</h4>
+<p class="text-body-md text-on-surface-variant text-sm">3-Phase: TikTok Awareness (#xuoicheo), Engagement via Manga "An Nam Chèo Truyện", and Amplification via immersive escape rooms.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">Results &amp; KPI</h4>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">+30%</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Awareness Lift</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">300K</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">TikTok Engagements</span>
+</div>
+</div>
+<a class="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-primary text-on-primary rounded-full font-label-md text-label-md transition-all hover:opacity-90 cta-button-shadow w-full justify-center" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+                                        Case Study
+                                    </a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Case 04: USPS Never Letter -->
+<div class="case-slide">
+<article class="bg-surface-container-lowest border border-outline/10 p-8 md:p-12 rounded-lg h-full shadow-sm hover:shadow-md transition-all">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<div class="lg:col-span-5 space-y-6 border-r border-outline/10 pr-0 lg:pr-10">
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">04</span>
+<span class="px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Integrated Campaign</span>
+<span class="px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Team of 5</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg leading-tight">USPS — <span class="stylized-heading font-normal">"The Never Letter"</span></h2>
+<p class="text-body-md text-on-surface-variant">Integrated campaign repositioning Informed Delivery as Gen Z's platform for authentic, tangible emotional connection via unsent notes.</p>
+<div class="insight-highlight p-6 rounded-r-lg">
+<h4 class="font-label-md text-label-md text-primary uppercase mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+                                        The Insight
+                                    </h4>
+<p class="text-body-md text-on-surface italic leading-relaxed">
+                                        "The physical letter isn't outdated — it's the most Gen Z thing imaginable. Rare, intentional, impossible to unsend. USPS is that platform for courage."
+                                    </p>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 py-2">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">The Challenge</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Relevance crisis. Gen Z has abandoned mail. Need an emotional reason for Informed Delivery to exist beyond function.</p>
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2 mt-6">The Strategy</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Dual experience design for Sender/Recipient. "Dear Future Me" time-capsule letters and university pop-up letter writing stations.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">Results &amp; KPI</h4>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">+15%</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Sign-up Rate</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">50K</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Social Shares</span>
+</div>
+</div>
+<a class="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-primary text-on-primary rounded-full font-label-md text-label-md transition-all hover:opacity-90 cta-button-shadow w-full justify-center" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+                                        Case Study
+                                    </a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- More cases (5-10) using DOCUMENT_11 and additional project logic -->
+<!-- Case 05: Stitch Fix -->
+<div class="case-slide">
+<article class="bg-surface-container-lowest border border-outline/10 p-8 md:p-12 rounded-lg h-full shadow-sm hover:shadow-md transition-all">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<div class="lg:col-span-5 space-y-6 border-r border-outline/10 pr-0 lg:pr-10">
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">05</span>
+<span class="px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Product Strategy</span>
+<span class="px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Plan</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg leading-tight">Stitch Fix — <span class="stylized-heading font-normal">Outfit Planning</span> (OPC)</h2>
+<p class="text-body-md text-on-surface-variant">AI-powered wardrobe planning tool repositions Stitch Fix as a sustainability leader through behavior change, not just sourcing.</p>
+<div class="insight-highlight p-6 rounded-r-lg">
+<h4 class="font-label-md text-label-md text-primary uppercase mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+                                        The Insight
+                                    </h4>
+<p class="text-body-md text-on-surface italic leading-relaxed">
+                                        "The sustainability opportunity is behavior change. 28% of clothes are never worn. Planning better makes existing inventory the sustainability story."
+                                    </p>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 py-2">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">The Challenge</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Greenwashing gap. Partnering with fast-fashion. Needs credible, functional entry point into sustainability.</p>
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2 mt-6">The Strategy</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Outfit Planning Calendar (OPC) AI integration. Maximize wardrobe use. Leverages the 2019 Finery acquisition IP.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">Results &amp; KPI</h4>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">NPS</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">High Trial Score</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">28%</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Wardrobe Re-use</span>
+</div>
+</div>
+<a class="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-primary text-on-primary rounded-full font-label-md text-label-md transition-all hover:opacity-90 cta-button-shadow w-full justify-center" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+                                        Case Study
+                                    </a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Case 06: Ford Move FordWard -->
+<div class="case-slide">
+<article class="bg-surface-container-lowest border border-outline/10 p-8 md:p-12 rounded-lg h-full shadow-sm hover:shadow-md transition-all">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<div class="lg:col-span-5 space-y-6 border-r border-outline/10 pr-0 lg:pr-10">
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">06</span>
+<span class="px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Brand Campaign</span>
+<span class="px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Team of 4</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg leading-tight">Ford Motor — <span class="stylized-heading font-normal">"Move FordWard"</span></h2>
+<p class="text-body-md text-on-surface-variant">Aspirational female-forward messaging roadmap for Ford Escape's Northeast "Strivers" target.</p>
+<div class="insight-highlight p-6 rounded-r-lg">
+<h4 class="font-label-md text-label-md text-primary uppercase mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+                                        The Insight
+                                    </h4>
+<p class="text-body-md text-on-surface italic leading-relaxed">
+                                        "The Striver doesn't want a car — she wants recognition. She wants proof she's making the right move. The car is the supporting character."
+                                    </p>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 py-2">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">The Challenge</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Identifying primary targets in NJ/CT/PA. Mapping feature values to deep emotional payoffs in a saturated SUV market.</p>
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2 mt-6">The Strategy</h4>
+<p class="text-body-md text-on-surface-variant text-sm">"Rationality Table" architecture. 4-Quarter media roadmap from awareness to loyalty advocacy for the "Suburban Commuter".</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">Results &amp; KPI</h4>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">A+</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Personality Audit</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">VALS</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Psychographic Fit</span>
+</div>
+</div>
+<a class="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-primary text-on-primary rounded-full font-label-md text-label-md transition-all hover:opacity-90 cta-button-shadow w-full justify-center" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+                                        Case Study
+                                    </a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Case 07: Duolingo Strategy -->
+<div class="case-slide">
+<article class="bg-surface-container-lowest border border-outline/10 p-8 md:p-12 rounded-lg h-full shadow-sm hover:shadow-md transition-all">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<div class="lg:col-span-5 space-y-6 border-r border-outline/10 pr-0 lg:pr-10">
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">07</span>
+<span class="px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Influencer Strategy</span>
+<span class="px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Solo</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg leading-tight">Duolingo — <span class="stylized-heading font-normal">Creator Strategy</span> Pitch</h2>
+<p class="text-body-md text-on-surface-variant">Matching brand dimensions to five creator universes with bespoke success metrics and narrative hooks.</p>
+<div class="insight-highlight p-6 rounded-r-lg">
+<h4 class="font-label-md text-label-md text-primary uppercase mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+                                        The Insight
+                                    </h4>
+<p class="text-body-md text-on-surface italic leading-relaxed">
+                                        "Narrative relevance beats raw reach. Audiences respond when the brand affects story stakes. Tonal compatibility is the winning criteria."
+                                    </p>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 py-2">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">The Challenge</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Moving beyond traditional ads. 76% unlikely to watch a 60s commercial. Need character-driven integrations.</p>
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2 mt-6">The Strategy</h4>
+<p class="text-body-md text-on-surface-variant text-sm">"Duo Vibe Check" framework. Targeted matching for @GoodWorkMB, @Jynxzi, and @MichelleChoi based on brand archetypes.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">Results &amp; KPI</h4>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">8.58%</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Target ER</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">57%</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Reactivation Rate</span>
+</div>
+</div>
+<a class="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-primary text-on-primary rounded-full font-label-md text-label-md transition-all hover:opacity-90 cta-button-shadow w-full justify-center" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+                                        Case Study
+                                    </a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Case 08: La Dong x Citarella -->
+<div class="case-slide">
+<article class="bg-surface-container-lowest border border-outline/10 p-8 md:p-12 rounded-lg h-full shadow-sm hover:shadow-md transition-all">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<div class="lg:col-span-5 space-y-6 border-r border-outline/10 pr-0 lg:pr-10">
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">08</span>
+<span class="px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Partnership</span>
+<span class="px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Solo</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg leading-tight">La Dong × Citarella — <span class="stylized-heading font-normal">Seafood Collab</span></h2>
+<p class="text-body-md text-on-surface-variant">Partnership proposal bridging an NYC restaurant and premium retailer through culturally-anchored shoppable kits.</p>
+<div class="insight-highlight p-6 rounded-r-lg">
+<h4 class="font-label-md text-label-md text-primary uppercase mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+                                        The Insight
+                                    </h4>
+<p class="text-body-md text-on-surface italic leading-relaxed">
+                                        "Partnerships work when each partner fills a gap. La Dong provides authenticity; Citarella provides credibility. Seafood specificity is an advantage."
+                                    </p>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 py-2">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">The Challenge</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Underrepresentation of Vietnamese seafood in NYC. Capturing younger foodie demographics for a traditional premium retailer.</p>
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2 mt-6">The Strategy</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Limited "Bun Hai San" menu and shoppable kits. QR-driven cross-traffic. Curated selection of 5 NYC Gen Z foodie influencers.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">Results &amp; KPI</h4>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">QR</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Traffic Growth</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">5</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">KOL Selection</span>
+</div>
+</div>
+<a class="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-primary text-on-primary rounded-full font-label-md text-label-md transition-all hover:opacity-90 cta-button-shadow w-full justify-center" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+                                        Case Study
+                                    </a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Case 09: ReRAM Bronx Research -->
+<div class="case-slide">
+<article class="bg-surface-container-lowest border border-outline/10 p-8 md:p-12 rounded-lg h-full shadow-sm hover:shadow-md transition-all">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<div class="lg:col-span-5 space-y-6 border-r border-outline/10 pr-0 lg:pr-10">
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">09</span>
+<span class="px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Market Research</span>
+<span class="px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Team of 4</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg leading-tight">ReRAM — <span class="stylized-heading font-normal">Bronx Thrift</span> Store Research</h2>
+<p class="text-body-md text-on-surface-variant">Survey study revealing that Bronx thrift stores lose to Manhattan not on price, but on curation and atmosphere.</p>
+<div class="insight-highlight p-6 rounded-r-lg">
+<h4 class="font-label-md text-label-md text-primary uppercase mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+                                        The Insight
+                                    </h4>
+<p class="text-body-md text-on-surface italic leading-relaxed">
+                                        "Curation beats price. The gap is product offering and aesthetic, not geography or cost. Management assumed a price problem; the data proved a vibe problem."
+                                    </p>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 py-2">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">The Challenge</h4>
+<p class="text-body-md text-on-surface-variant text-sm">93% of Fordham students thrift, but only 29% shop locally. Manhattan dominates despite higher pricing.</p>
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2 mt-6">The Strategy</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Recommendations for student-curated racks ($5-$20 range) and store atmosphere investment to convert non-visitors.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">Results &amp; KPI</h4>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">65%</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Want Curation</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">47%</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Price Concern</span>
+</div>
+</div>
+<a class="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-primary text-on-primary rounded-full font-label-md text-label-md transition-all hover:opacity-90 cta-button-shadow w-full justify-center" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+                                        Case Study
+                                    </a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Case 10: Hershey Reserve -->
+<div class="case-slide">
+<article class="bg-surface-container-lowest border border-outline/10 p-8 md:p-12 rounded-lg h-full shadow-sm hover:shadow-md transition-all">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<div class="lg:col-span-5 space-y-6 border-r border-outline/10 pr-0 lg:pr-10">
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">10</span>
+<span class="px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Product Strategy</span>
+<span class="px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-md text-[11px] uppercase tracking-wider">Team</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg leading-tight">Hershey's Reserve — <span class="stylized-heading font-normal">Premium Launch</span></h2>
+<p class="text-body-md text-on-surface-variant">Brand extension strategy positioning Hershey into the smooth-and-bitter adult chocolate whitespace.</p>
+<div class="insight-highlight p-6 rounded-r-lg">
+<h4 class="font-label-md text-label-md text-primary uppercase mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+                                        The Insight
+                                    </h4>
+<p class="text-body-md text-on-surface italic leading-relaxed">
+                                        "Bitterness is a sophistication signal. Refined Indulgers seek mindful luxury. Packaging design is a strategic argument, not just aesthetic."
+                                    </p>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 py-2">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">The Challenge</h4>
+<p class="text-body-md text-on-surface-variant text-sm">Hershey perceived as sugary mass-market. Need to capture the "Refined Indulger" urban professional segment.</p>
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2 mt-6">The Strategy</h4>
+<p class="text-body-md text-on-surface-variant text-sm">60-80% cacao single-origin series. Cross-cultural packaging comparison across Japan, Europe, and US to ground design choices.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase text-secondary tracking-widest border-b border-outline/10 pb-2">Results &amp; KPI</h4>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">Premium</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Price Tiering</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block font-headline-md text-primary">#Taste</span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant">Social Hook</span>
+</div>
+</div>
+<a class="mt-6 inline-flex items-center gap-3 px-8 py-3 bg-primary text-on-primary rounded-full font-label-md text-label-md transition-all hover:opacity-90 cta-button-shadow w-full justify-center" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+                                        Case Study
+                                    </a>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer synced with SCREEN_78 -->
+<footer class="w-full pt-24 bg-surface-container">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-headline-lg text-primary text-[28px] tracking-tight">Thao Nguyen</div>
+<p class="font-body-md text-on-surface-variant">© 2026 Thao Nguyen — Strategic Precision &amp; Organic Growth</p>
+<div class="flex flex-wrap justify-center gap-6 md:gap-10">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md flex items-center gap-2" href="#">
+<span class="w-1.5 h-1.5 bg-primary-fixed rounded-full"></span> LinkedIn
+                </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md flex items-center gap-2" href="#">
+<span class="w-1.5 h-1.5 bg-primary-fixed rounded-full"></span> Instagram
+                </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md flex items-center gap-2" href="#">
+<span class="w-1.5 h-1.5 bg-primary-fixed rounded-full"></span> Download Resume
+                </a>
+</div>
+</div>
+</footer>
+<!-- Botanical background layer -->
+<div class="fixed inset-0 pointer-events-none z-[-1] opacity-10 overflow-hidden">
+<svg class="absolute -top-40 -left-40 w-[40rem] h-[40rem] text-primary" viewBox="0 0 100 100">
+<path d="M10,90 Q30,50 90,10" fill="transparent" stroke="currentColor" stroke-width="0.05"></path>
+<path d="M10,90 Q50,70 70,30" fill="transparent" stroke="currentColor" stroke-width="0.05"></path>
+</svg>
+</div>
+<script>
+        // Micro-interactions for filter buttons
+        const filters = document.querySelectorAll('.filter-underline');
+        filters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                filters.forEach(f => {
+                    f.classList.remove('opacity-100', 'font-bold');
+                    f.classList.add('opacity-60');
+                });
+                filter.classList.add('opacity-100', 'font-bold');
+                filter.classList.remove('opacity-60');
+            });
+        });
+
+        // Interactive Flower Trail (Petal Particles)
+        const petalContainer = document.getElementById('petal-container');
+        let lastX = 0;
+        let lastY = 0;
+        const distanceThreshold = 45;
+
+        window.addEventListener('mousemove', (e) => {
+            const dx = e.clientX - lastX;
+            const dy = e.clientY - lastY;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance > distanceThreshold) {
+                createPetal(e.clientX, e.clientY);
+                lastX = e.clientX;
+                lastY = e.clientY;
+            }
+        });
+
+        function createPetal(x, y) {
+            const petal = document.createElement('div');
+            petal.className = 'petal-particle';
+            
+            const size = Math.random() * 8 + 6;
+            const rotation = Math.random() * 360;
+            const driftX = (Math.random() - 0.5) * 60;
+            const driftY = Math.random() * 80 + 20; // Fall downwards mostly
+            
+            petal.style.width = `${size}px`;
+            petal.style.height = `${size * 1.5}px`;
+            petal.style.left = `${x}px`;
+            petal.style.top = `${y}px`;
+            petal.style.transform = `rotate(${rotation}deg)`;
+            petal.style.background = `rgba(232, 165, 165, ${0.4 + Math.random() * 0.4})`;
+
+            petalContainer.appendChild(petal);
+
+            petal.animate([
+                { transform: `translate(0, 0) rotate(${rotation}deg)`, opacity: 0.8 },
+                { transform: `translate(${driftX}px, ${driftY}px) rotate(${rotation + 180}deg)`, opacity: 0 }
+            ], {
+                duration: 1200,
+                easing: 'cubic-bezier(0.16, 1, 0.3, 1)'
+            });
+
+            setTimeout(() => petal.remove(), 1200);
+        }
+    </script>
+</body></html>

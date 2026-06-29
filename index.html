@@ -1,0 +1,383 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Thao Nguyen — Strategic Precision &amp; Organic Growth</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#e3bebe",
+                        "secondary-container": "#f6d9d9",
+                        "on-primary-fixed-variant": "#6a393a",
+                        "surface": "#fdf9f5",
+                        "primary-container": "#e8a5a5",
+                        "outline-variant": "#d6c2c1",
+                        "on-secondary-fixed-variant": "#564242",
+                        "surface-container-highest": "#e5e2de",
+                        "primary-fixed": "#ffdad9",
+                        "on-surface-variant": "#524343",
+                        "tertiary-fixed": "#ffdad9",
+                        "inverse-on-surface": "#f4f0ec",
+                        "surface-tint": "#855050",
+                        "surface-container-high": "#ebe7e4",
+                        "surface-dim": "#ddd9d6",
+                        "tertiary": "#745757",
+                        "secondary": "#6f5959",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#735d5e",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#dcc0c0",
+                        "on-primary-fixed": "#350f11",
+                        "on-tertiary-fixed": "#2a1616",
+                        "inverse-surface": "#31302e",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e5e2de",
+                        "on-surface": "#1c1c19",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#6a393a",
+                        "on-background": "#1c1c19",
+                        "surface-container": "#f1ede9",
+                        "outline": "#847373",
+                        "background": "#fdf9f5",
+                        "tertiary-container": "#d1aeae",
+                        "primary-fixed-dim": "#fab5b5",
+                        "on-tertiary-container": "#5b4141",
+                        "surface-container-low": "#f7f3ef",
+                        "on-secondary-fixed": "#271718",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fdf9f5",
+                        "on-tertiary-fixed-variant": "#5a4040",
+                        "inverse-primary": "#fab5b5",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#f9dcdc",
+                        "primary": "#855050",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["60px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["42px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .scroll-snap-container {
+            scroll-snap-type: y mandatory;
+            height: 100vh;
+            overflow-y: scroll;
+        }
+        .scroll-snap-section {
+            scroll-snap-align: start;
+            min-height: 100vh;
+        }
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+        .animate-float {
+            animation: float 10s ease-in-out infinite;
+        }
+        .soft-text-shadow {
+            text-shadow: 0 2px 10px rgba(133, 80, 80, 0.05);
+        }
+        .editorial-line {
+            height: 1px;
+            background: linear-gradient(to right, #855050, transparent);
+            opacity: 0.2;
+        }
+        
+        /* Interactive Petal Trail Styles */
+        .petal-particle {
+            position: fixed;
+            pointer-events: none;
+            width: 12px;
+            height: 18px;
+            background: #fab5b5;
+            border-radius: 50% 0 50% 50%;
+            opacity: 0.6;
+            z-index: 9999;
+            transform-origin: center;
+            animation: petalFadeOut 1s forwards ease-out;
+        }
+        @keyframes petalFadeOut {
+            0% { transform: scale(1) rotate(0deg); opacity: 0.6; }
+            100% { transform: scale(0) rotate(45deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container font-body-md overflow-hidden">
+<div id="petal-container"><div class="petal-particle" style="width: 13.4611px; height: 20.1917px; left: 289px; top: 498px; transform: rotate(17.7455deg); background: rgba(232, 165, 165, 0.675);"></div><div class="petal-particle" style="width: 14.144px; height: 21.216px; left: 302px; top: 542px; transform: rotate(195.525deg); background: rgba(232, 165, 165, 0.68);"></div><div class="petal-particle" style="width: 16.0619px; height: 24.0928px; left: 314px; top: 582px; transform: rotate(148.676deg); background: rgba(232, 165, 165, 0.41);"></div><div class="petal-particle" style="width: 11.1142px; height: 16.6713px; left: 357px; top: 600px; transform: rotate(122.069deg); background: rgba(232, 165, 165, 0.66);"></div><div class="petal-particle" style="width: 15.1654px; height: 22.7482px; left: 397px; top: 616px; transform: rotate(24.8202deg); background: rgba(232, 165, 165, 0.475);"></div><div class="petal-particle" style="width: 16.8507px; height: 25.276px; left: 435px; top: 629px; transform: rotate(155.25deg); background: rgba(232, 165, 165, 0.447);"></div><div class="petal-particle" style="width: 11.2528px; height: 16.8792px; left: 477px; top: 645px; transform: rotate(79.8138deg); background: rgba(232, 165, 165, 0.482);"></div><div class="petal-particle" style="width: 10.0835px; height: 15.1252px; left: 658px; top: 609px; transform: rotate(32.8454deg); background: rgba(232, 165, 165, 0.8);"></div><div class="petal-particle" style="width: 12.2832px; height: 18.4247px; left: 698px; top: 637px; transform: rotate(50.2616deg); background: rgba(232, 165, 165, 0.745);"></div><div class="petal-particle" style="width: 13.3786px; height: 20.0679px; left: 740px; top: 654px; transform: rotate(92.8363deg); background: rgba(232, 165, 165, 0.78);"></div><div class="petal-particle" style="width: 15.1747px; height: 22.7621px; left: 736px; top: 606px; transform: rotate(329.992deg); background: rgba(232, 165, 165, 0.773);"></div><div class="petal-particle" style="width: 11.7708px; height: 17.6562px; left: 717px; top: 568px; transform: rotate(284.74deg); background: rgba(232, 165, 165, 0.72);"></div><div class="petal-particle" style="width: 9.91014px; height: 14.8652px; left: 698px; top: 530px; transform: rotate(178.314deg); background: rgba(232, 165, 165, 0.545);"></div><div class="petal-particle" style="width: 16.0478px; height: 24.0716px; left: 671px; top: 563px; transform: rotate(247.324deg); background: rgba(232, 165, 165, 0.776);"></div><div class="petal-particle" style="width: 13.5995px; height: 20.3992px; left: 645px; top: 605px; transform: rotate(293.203deg); background: rgba(232, 165, 165, 0.66);"></div><div class="petal-particle" style="width: 14.4988px; height: 21.7482px; left: 627px; top: 643px; transform: rotate(358.184deg); background: rgba(232, 165, 165, 0.765);"></div><div class="petal-particle" style="width: 16.8521px; height: 25.2782px; left: 607px; top: 685px; transform: rotate(353.928deg); background: rgba(232, 165, 165, 0.663);"></div><div class="petal-particle" style="width: 17.4075px; height: 26.1112px; left: 587px; top: 726px; transform: rotate(250.858deg); background: rgba(232, 165, 165, 0.75);"></div><div class="petal-particle" style="width: 16.5154px; height: 24.7731px; left: 560px; top: 759px; transform: rotate(190.255deg); background: rgba(232, 165, 165, 0.77);"></div></div>
+<!-- Top Navigation Bar - Updated to match COMPONENTS_5 style -->
+<nav class="sticky top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-primary/10 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tighter text-on-background active:scale-95 transition-transform" href="#">Thao Nguyen</a>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#hero">Home</a>
+<a class="font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#work">Work</a>
+<a class="font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#experience">Experience</a>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md uppercase tracking-wider hover:opacity-80 transition-all duration-300 active:scale-95">Connect</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="scroll-snap-container h-screen overflow-y-auto">
+<!-- Chapter 1: Hero - High-Energy Multi-Tonal Version Preserved -->
+<section class="scroll-snap-section relative flex items-center justify-center overflow-hidden bg-background" id="hero"><div class="absolute inset-0 pointer-events-none overflow-hidden bg-gradient-to-br from-[#f6d9d9] via-[#fdf9f5] to-[#e5e2de] opacity-80"></div><div class="absolute inset-0 pointer-events-none overflow-hidden"><div class="absolute top-[-20%] left-[-10%] w-[80vw] h-[80vw] bg-[#e8a5a5]/30 rounded-full blur-[120px]"></div><div class="absolute bottom-[-20%] right-[-10%] w-[70vw] h-[70vw] bg-[#d1aeae]/20 rounded-full blur-[100px]"></div></div><div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full h-full flex flex-col md:flex-row items-center justify-between relative z-10 pt-24 md:pt-0"><div class="w-full md:w-1/2 flex flex-col items-start reveal-up active"><div class="flex items-center gap-4 mb-6"><div class="h-px w-12 bg-primary"></div><span class="font-label-md uppercase tracking-widest text-primary">Portfolio 2026</span></div><h1 class="font-headline-xl text-[48px] md:text-[80px] leading-[1.1] mb-8 tracking-tighter">Campaign <span class="italic font-normal text-primary">Strategist</span><div class="">Consumer<font color="#855050"><i>&nbsp;Researcher</i></font><br>Data <span class="italic font-normal text-primary">Analyst</span></div></h1><p class="font-body-lg text-on-surface-variant max-w-md mb-10 opacity-80">I find the human truth in the data, then build the story around it.</p><div class="flex flex-wrap gap-6"><a class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-md uppercase tracking-widest hover:opacity-90 transition-all shadow-xl" href="#work">Explore Work</a><a class="border border-primary/20 text-primary px-10 py-4 rounded-full font-label-md uppercase tracking-widest hover:bg-primary/5 transition-all" href="#contact">Get in Touch</a></div></div><div class="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end reveal-up active" style="transition-delay: 200ms;"><div class="relative w-[80vw] h-[80vw] md:w-[35vw] md:h-[45vw] max-w-[500px]"><div class="absolute inset-0 bg-primary/5 rounded-xl rotate-3 scale-105"></div><div class="absolute inset-0 bg-secondary-container/30 rounded-xl -rotate-3"></div><div class="relative h-full w-full rounded-xl overflow-hidden shadow-2xl border border-white/20"><img alt="Thao Nguyen" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYvYlzcFiKt7n4J7dPU2-RXtuhEnLTXVRbpg4m3dUH1NdwHWCamGHdhPkLPBrIrQ_NWq3_7PPQMwgqCG_GimkLGjGVLQ8AQcTxYuhX_up3qij33LLvaYHZVyrJB1P7GEPIScjucOb3MhOFtEO3M8fh6Hq4YVdeQeR31YaSIE-N37lazNSk_z7sXMmqeXd4PPFsXfEV2WTQZ_T3o4WLBVCGgqAOU4MmwVmRPGHOLTJP-AaI_Fd5PBKUo-N6r92Dq5Bcd9tx6aWwyRWZ"></div></div></div></div></section>
+<!-- Impact Stats Section -->
+<section class="py-24 bg-surface-container-lowest border-y border-primary/5" id="work">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="text-center">
+<div class="font-headline-xl text-primary text-6xl mb-2">7</div>
+<div class="font-label-md uppercase tracking-widest text-on-surface-variant">Internships</div>
+</div>
+<div class="text-center">
+<div class="font-headline-xl text-primary text-6xl mb-2">18+</div>
+<div class="font-label-md uppercase tracking-widest text-on-surface-variant">Case Studies</div>
+</div>
+<div class="text-center">
+<div class="font-headline-xl text-primary text-6xl mb-2">1M+</div>
+<div class="font-label-md uppercase tracking-widest text-on-surface-variant">Social Likes</div>
+</div>
+<div class="text-center">
+<div class="font-headline-xl text-primary text-6xl mb-2">6</div>
+<div class="font-label-md uppercase tracking-widest text-on-surface-variant">Countries</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Chapter -->
+<section class="scroll-snap-section bg-surface-container-lowest flex items-center py-24" id="experience">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="reveal-up active">
+<h2 class="font-headline-xl text-[42px] md:text-[56px] mb-6 leading-tight">Current <br><span class="italic text-primary font-normal">Chapter</span></h2>
+<div class="editorial-line mb-8"></div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-2xl">location_on</span>
+<p class="font-body-md text-on-surface-variant"><span class="font-bold text-on-surface">New York</span></p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-2xl">school</span>
+<p class="font-body-md text-on-surface-variant"><span class="font-bold text-on-surface">Fordham University</span> — Class of 2027</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-4 reveal-up active" style="transition-delay: 200ms;">
+<div class="bg-background p-8 rounded-xl border border-primary/5">
+<div class="font-label-md text-primary uppercase tracking-widest text-[10px] mb-3">Latest</div>
+<h4 class="font-headline-md text-xl mb-1">Internship: Ogilvy</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Client: Premier Protein</p>
+</div>
+<div class="bg-primary/5 p-8 rounded-xl border border-primary/10">
+<div class="font-label-md text-primary uppercase tracking-widest text-[10px] mb-3">On the Workbench</div>
+<h4 class="font-headline-md text-xl mb-1">4 Active Projects</h4>
+<div class="w-full bg-white h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full w-[75%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Capabilities Section -->
+<section class="scroll-snap-section bg-background py-24" id="capabilities">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<h2 class="font-headline-xl text-[48px] md:text-[64px]">Core Capabilities</h2>
+<p class="font-body-lg text-on-surface-variant max-w-sm mb-2 opacity-60">Strategic evolution through data-driven human insights.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-10 rounded-xl border border-primary/5">
+<div class="flex justify-between items-start mb-8"><span class="font-headline-lg text-primary/10">01</span><span class="material-symbols-outlined text-4xl text-primary/30">search</span></div>
+<h3 class="font-headline-md text-2xl mb-4">Discover</h3>
+<ul class="font-body-md text-on-surface-variant opacity-70 space-y-2"><li class="">• Market Research</li><li class="">• Social Listening</li><li class="">• User Interviews</li></ul>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl border border-primary/5">
+<div class="flex justify-between items-start mb-8"><span class="font-headline-lg text-primary/10">02</span><span class="material-symbols-outlined text-4xl text-primary/30">analytics</span></div>
+<h3 class="font-headline-md text-2xl mb-4">Analyze</h3>
+<ul class="font-body-md text-on-surface-variant opacity-70 space-y-2"><li class="">• Data Cleaning</li><li class="">• Trend Analysis</li><li class="">• Segmentation</li></ul>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl border border-primary/5">
+<div class="flex justify-between items-start mb-8"><span class="font-headline-lg text-primary/10">03</span><span class="material-symbols-outlined text-4xl text-primary/30">psychology</span></div>
+<h3 class="font-headline-md text-2xl mb-4">Interpret</h3>
+<ul class="font-body-md text-on-surface-variant opacity-70 space-y-2"><li class="">• Human Insights</li><li class="">• Cultural Mapping</li><li class="">• Behavior Patterns</li></ul>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl border border-primary/5">
+<div class="flex justify-between items-start mb-8"><span class="font-headline-lg text-primary/10">04</span><span class="material-symbols-outlined text-4xl text-primary/30">hub</span></div>
+<h3 class="font-headline-md text-2xl mb-4">Strategize</h3>
+<ul class="font-body-md text-on-surface-variant opacity-70 space-y-2"><li class="">• Brand Positioning</li><li class="">• GTM Strategy</li><li class="">• Campaign Architecture</li></ul>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl border border-primary/5">
+<div class="flex justify-between items-start mb-8"><span class="font-headline-lg text-primary/10">05</span><span class="material-symbols-outlined text-4xl text-primary/30">campaign</span></div>
+<h3 class="font-headline-md text-2xl mb-4">Execute</h3>
+<ul class="font-body-md text-on-surface-variant opacity-70 space-y-2"><li class="">• Content Creation</li><li class="">• Brand Activations</li><li class="">• Media Planning</li></ul>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl border border-primary/5">
+<div class="flex justify-between items-start mb-8"><span class="font-headline-lg text-primary/10">06</span><span class="material-symbols-outlined text-4xl text-primary/30">trending_up</span></div>
+<h3 class="font-headline-md text-2xl mb-4">Scale</h3>
+<ul class="font-body-md text-on-surface-variant opacity-70 space-y-2"><li class="">• Performance Tracking</li><li class="">• Growth Optimization</li><li class="">• ROI Analysis</li></ul>
+</div>
+</div>
+<div class="mt-16 flex justify-center"><a class="bg-primary text-on-primary px-12 py-4 rounded-full font-label-md uppercase tracking-widest hover:opacity-90 transition-all shadow-xl" href="#work">View My Work</a></div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="scroll-snap-section bg-primary text-on-primary flex flex-col justify-between py-24 px-margin-mobile md:px-margin-desktop overflow-hidden relative" id="contact">
+<div class="absolute inset-0 pointer-events-none opacity-5">
+<svg class="absolute w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+<path d="M0 100 C 20 0 50 0 100 100 Z" fill="white"></path>
+</svg>
+</div>
+<div class="max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-20 items-center mt-auto z-10">
+<div class="text-center md:text-left">
+<h2 class="font-headline-xl text-[48px] md:text-[80px] leading-[1.1] mb-8">Let's Grow <br><span class="italic font-normal">Together.</span></h2>
+<div class="space-y-8 flex flex-col items-center md:items-start">
+<div class="flex items-center gap-6 group cursor-pointer">
+<span class="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-all">
+<span class="material-symbols-outlined">alternate_email</span>
+</span>
+<span class="font-body-lg text-xl">minhthao.nguyen.ushn@gmail.com</span>
+</div>
+</div>
+</div>
+<form class="space-y-8 bg-white/5 p-12 md:p-16 backdrop-blur-2xl border border-white/10 rounded-xl shadow-2xl">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-white/30 py-4 focus:ring-0 focus:border-white placeholder:text-white/40 font-body-lg text-white" placeholder="Full Name" type="text">
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-white/30 py-4 focus:ring-0 focus:border-white placeholder:text-white/40 font-body-lg text-white" placeholder="Email Address" type="email">
+</div>
+<div class="relative">
+<textarea class="w-full bg-transparent border-0 border-b border-white/30 py-4 focus:ring-0 focus:border-white placeholder:text-white/40 font-body-lg text-white resize-none" placeholder="Your Message" rows="3"></textarea>
+</div>
+<button class="w-full bg-white text-primary py-5 rounded-full font-label-md uppercase tracking-widest hover:scale-[1.02] active:scale-95 transition-all shadow-xl font-bold" type="submit">Submit Inquiry</button>
+</form>
+</div>
+<!-- Footer - Updated to match COMPONENTS_5 style -->
+<footer class="mt-auto pt-24 w-full z-10">
+<div class="w-full bg-surface-container py-12 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6"><div class="font-headline-lg text-primary text-[28px] tracking-tight">Thao Nguyen</div><p class="font-body-md text-on-surface-variant">© 2026 Thao Nguyen — Strategic Precision &amp; Organic Growth</p><div class="flex gap-10"><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#work">Work</a><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Insights</a><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#contact">Connect</a></div></div>
+</div>
+</footer>
+</section>
+</main>
+<script>
+    // Reveal Animations on Scroll
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+    // Interactive Petal Trail Effect - Applied from SCREEN_33 logic
+    const petalContainer = document.getElementById('petal-container');
+    let lastX = 0;
+    let lastY = 0;
+    const distanceThreshold = 40; // minimum movement distance to spawn a petal
+
+    window.addEventListener('mousemove', (e) => {
+        const dx = e.clientX - lastX;
+        const dy = e.clientY - lastY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance > distanceThreshold) {
+            createPetal(e.clientX, e.clientY);
+            lastX = e.clientX;
+            lastY = e.clientY;
+        }
+    });
+
+    function createPetal(x, y) {
+        const petal = document.createElement('div');
+        petal.className = 'petal-particle';
+        
+        // Randomize petal properties
+        const size = Math.random() * 10 + 8;
+        const rotation = Math.random() * 360;
+        const driftX = (Math.random() - 0.5) * 50;
+        const driftY = (Math.random() - 0.5) * 50;
+        
+        petal.style.width = `${size}px`;
+        petal.style.height = `${size * 1.5}px`;
+        petal.style.left = `${x}px`;
+        petal.style.top = `${y}px`;
+        petal.style.transform = `rotate(${rotation}deg)`;
+        petal.style.background = `rgba(232, 165, 165, ${0.4 + Math.random() * 0.4})`;
+
+        petalContainer.appendChild(petal);
+
+        // Animate drift
+        petal.animate([
+            { transform: `translate(0, 0) rotate(${rotation}deg)`, opacity: 0.8 },
+            { transform: `translate(${driftX}px, ${driftY}px) rotate(${rotation + 90}deg)`, opacity: 0 }
+        ], {
+            duration: 1000,
+            easing: 'ease-out'
+        });
+
+        setTimeout(() => {
+            petal.remove();
+        }, 1000);
+    }
+</script>
+
+
+
+
+
+
+</body></html>
