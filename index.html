@@ -130,6 +130,9 @@
             background: linear-gradient(to right, #855050, transparent);
             opacity: 0.2;
         }
+        .soft-shadow {
+            box-shadow: 0 10px 40px -10px rgba(133, 80, 80, 0.15);
+        }
         
         /* Interactive Petal Trail Styles */
         .petal-particle {
@@ -155,12 +158,12 @@
 <!-- Top Navigation Bar - Updated to match COMPONENTS_5 style -->
 <nav class="sticky top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-primary/10 transition-all duration-300">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-<a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tighter text-on-background active:scale-95 transition-transform" href="#">Thao Nguyen</a>
+<a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tighter text-on-background active:scale-95 transition-transform" href="index.html">Thao Nguyen</a>
 <div class="hidden md:flex gap-10 items-center">
-<a class="font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#hero">Home</a>
-<a class="font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#work">Work</a>
-<a class="font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#experience">Experience</a>
-<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md uppercase tracking-wider hover:opacity-80 transition-all duration-300 active:scale-95">Connect</button>
+<a class="font-label-md uppercase text-primary font-bold transition-colors tracking-widest" href="index.html">Home</a>
+<a class="font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="work.html">Work</a>
+<a class="font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="experience.html">Experience</a>
+<a class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md uppercase tracking-wider hover:opacity-80 transition-all duration-300 active:scale-95" href="connect.html">Connect</a>
 </div>
 <button class="md:hidden text-primary">
 <span class="material-symbols-outlined">menu</span>
@@ -169,7 +172,7 @@
 </nav>
 <main class="scroll-snap-container h-screen overflow-y-auto">
 <!-- Chapter 1: Hero - High-Energy Multi-Tonal Version Preserved -->
-<section class="scroll-snap-section relative flex items-center justify-center overflow-hidden bg-background" id="hero"><div class="absolute inset-0 pointer-events-none overflow-hidden bg-gradient-to-br from-[#f6d9d9] via-[#fdf9f5] to-[#e5e2de] opacity-80"></div><div class="absolute inset-0 pointer-events-none overflow-hidden"><div class="absolute top-[-20%] left-[-10%] w-[80vw] h-[80vw] bg-[#e8a5a5]/30 rounded-full blur-[120px]"></div><div class="absolute bottom-[-20%] right-[-10%] w-[70vw] h-[70vw] bg-[#d1aeae]/20 rounded-full blur-[100px]"></div></div><div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full h-full flex flex-col md:flex-row items-center justify-between relative z-10 pt-24 md:pt-0"><div class="w-full md:w-1/2 flex flex-col items-start reveal-up active"><div class="flex items-center gap-4 mb-6"><div class="h-px w-12 bg-primary"></div><span class="font-label-md uppercase tracking-widest text-primary">Portfolio 2026</span></div><h1 class="font-headline-xl text-[48px] md:text-[80px] leading-[1.1] mb-8 tracking-tighter">Campaign <span class="italic font-normal text-primary">Strategist</span><div class="">Consumer<font color="#855050"><i>&nbsp;Researcher</i></font><br>Data <span class="italic font-normal text-primary">Analyst</span></div></h1><p class="font-body-lg text-on-surface-variant max-w-md mb-10 opacity-80">I find the human truth in the data, then build the story around it.</p><div class="flex flex-wrap gap-6"><a class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-md uppercase tracking-widest hover:opacity-90 transition-all shadow-xl" href="#work">Explore Work</a><a class="border border-primary/20 text-primary px-10 py-4 rounded-full font-label-md uppercase tracking-widest hover:bg-primary/5 transition-all" href="#contact">Get in Touch</a></div></div><div class="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end reveal-up active" style="transition-delay: 200ms;"><div class="relative w-[80vw] h-[80vw] md:w-[35vw] md:h-[45vw] max-w-[500px]"><div class="absolute inset-0 bg-primary/5 rounded-xl rotate-3 scale-105"></div><div class="absolute inset-0 bg-secondary-container/30 rounded-xl -rotate-3"></div><div class="relative h-full w-full rounded-xl overflow-hidden shadow-2xl border border-white/20"><img alt="Thao Nguyen" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYvYlzcFiKt7n4J7dPU2-RXtuhEnLTXVRbpg4m3dUH1NdwHWCamGHdhPkLPBrIrQ_NWq3_7PPQMwgqCG_GimkLGjGVLQ8AQcTxYuhX_up3qij33LLvaYHZVyrJB1P7GEPIScjucOb3MhOFtEO3M8fh6Hq4YVdeQeR31YaSIE-N37lazNSk_z7sXMmqeXd4PPFsXfEV2WTQZ_T3o4WLBVCGgqAOU4MmwVmRPGHOLTJP-AaI_Fd5PBKUo-N6r92Dq5Bcd9tx6aWwyRWZ"></div></div></div></div></section>
+<section class="scroll-snap-section relative flex items-center justify-center overflow-hidden bg-background" id="hero"><div class="absolute inset-0 pointer-events-none overflow-hidden bg-gradient-to-br from-[#f6d9d9] via-[#fdf9f5] to-[#e5e2de] opacity-80"></div><div class="absolute inset-0 pointer-events-none overflow-hidden"><div class="absolute top-[-20%] left-[-10%] w-[80vw] h-[80vw] bg-[#e8a5a5]/30 rounded-full blur-[120px]"></div><div class="absolute bottom-[-20%] right-[-10%] w-[70vw] h-[70vw] bg-[#d1aeae]/20 rounded-full blur-[100px]"></div></div><div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full h-full flex flex-col md:flex-row items-center justify-between relative z-10 pt-24 md:pt-0"><div class="w-full md:w-1/2 flex flex-col items-start reveal-up active"><div class="flex items-center gap-4 mb-6"><div class="h-px w-12 bg-primary"></div><span class="font-label-md uppercase tracking-widest text-primary">Portfolio 2026</span></div><h1 class="font-headline-xl text-[48px] md:text-[80px] leading-[1.1] mb-8 tracking-tighter">Campaign <span class="italic font-normal text-primary">Strategist</span><div class="">Consumer<font color="#855050"><i>&nbsp;Researcher</i></font><br>Data <span class="italic font-normal text-primary">Analyst</span></div></h1><p class="font-body-lg text-on-surface-variant max-w-md mb-10 opacity-80">I find the human truth in the data, then build the story around it.</p><div class="flex flex-wrap gap-6"><a class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-md uppercase tracking-widest hover:opacity-90 transition-all shadow-xl" href="work.html">Explore Work</a><a class="border border-primary/20 text-primary px-10 py-4 rounded-full font-label-md uppercase tracking-widest hover:bg-primary/5 transition-all" href="#contact">Get in Touch</a></div></div><div class="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end reveal-up active" style="transition-delay: 200ms;"><div class="relative w-[80vw] h-[80vw] md:w-[35vw] md:h-[45vw] max-w-[500px]"><div class="absolute inset-0 bg-primary/5 rounded-xl rotate-3 scale-105"></div><div class="absolute inset-0 bg-secondary-container/30 rounded-xl -rotate-3"></div><div class="relative h-full w-full rounded-xl overflow-hidden shadow-2xl border border-white/20"><img alt="Thao Nguyen" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYvYlzcFiKt7n4J7dPU2-RXtuhEnLTXVRbpg4m3dUH1NdwHWCamGHdhPkLPBrIrQ_NWq3_7PPQMwgqCG_GimkLGjGVLQ8AQcTxYuhX_up3qij33LLvaYHZVyrJB1P7GEPIScjucOb3MhOFtEO3M8fh6Hq4YVdeQeR31YaSIE-N37lazNSk_z7sXMmqeXd4PPFsXfEV2WTQZ_T3o4WLBVCGgqAOU4MmwVmRPGHOLTJP-AaI_Fd5PBKUo-N6r92Dq5Bcd9tx6aWwyRWZ"></div></div></div></div></section>
 <!-- Impact Stats Section -->
 <section class="py-24 bg-surface-container-lowest border-y border-primary/5" id="work">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -267,45 +270,30 @@
 <ul class="font-body-md text-on-surface-variant opacity-70 space-y-2"><li class="">• Performance Tracking</li><li class="">• Growth Optimization</li><li class="">• ROI Analysis</li></ul>
 </div>
 </div>
-<div class="mt-16 flex justify-center"><a class="bg-primary text-on-primary px-12 py-4 rounded-full font-label-md uppercase tracking-widest hover:opacity-90 transition-all shadow-xl" href="#work">View My Work</a></div>
+<div class="mt-16 flex justify-center"><a class="bg-primary text-on-primary px-12 py-4 rounded-full font-label-md uppercase tracking-widest hover:opacity-90 transition-all shadow-xl" href="work.html">View My Work</a></div>
 </div>
 </section>
-<!-- Contact Section -->
-<section class="scroll-snap-section bg-primary text-on-primary flex flex-col justify-between py-24 px-margin-mobile md:px-margin-desktop overflow-hidden relative" id="contact">
-<div class="absolute inset-0 pointer-events-none opacity-5">
-<svg class="absolute w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
-<path d="M0 100 C 20 0 50 0 100 100 Z" fill="white"></path>
-</svg>
-</div>
-<div class="max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-20 items-center mt-auto z-10">
-<div class="text-center md:text-left">
-<h2 class="font-headline-xl text-[48px] md:text-[80px] leading-[1.1] mb-8">Let's Grow <br><span class="italic font-normal">Together.</span></h2>
-<div class="space-y-8 flex flex-col items-center md:items-start">
-<div class="flex items-center gap-6 group cursor-pointer">
-<span class="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-all">
-<span class="material-symbols-outlined">alternate_email</span>
-</span>
-<span class="font-body-lg text-xl">minhthao.nguyen.ushn@gmail.com</span>
+<!-- Connect: CTA -->
+<section class="scroll-snap-section bg-background flex flex-col justify-between py-24" id="contact">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center w-full flex-grow flex items-center">
+<div class="w-full">
+<div class="bg-primary p-12 md:p-24 rounded-xl soft-shadow relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/20 to-transparent"></div>
+<div class="relative z-10 space-y-8">
+<h2 class="font-headline-xl text-headline-xl text-on-primary">Let's Grow Together</h2>
+<p class="font-body-lg text-primary-fixed-dim max-w-2xl mx-auto opacity-90">Whether you're looking for a fresh perspective on marketing or just want to discuss the latest in creative writing, I'm always open to new connections.</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+<a class="bg-on-primary text-primary px-10 py-4 rounded-full font-label-md hover:scale-105 transition-all shadow-lg active:opacity-70" href="mailto:minhthao.nguyen.ushn@gmail.com">Email Me</a>
+<a class="border-2 border-primary-fixed-dim text-on-primary px-10 py-4 rounded-full font-label-md hover:bg-primary-fixed-dim hover:text-primary transition-all active:opacity-70" href="https://www.linkedin.com/in/thaonguyen47/" rel="noopener noreferrer" target="_blank">LinkedIn Profile</a>
 </div>
 </div>
 </div>
-<form class="space-y-8 bg-white/5 p-12 md:p-16 backdrop-blur-2xl border border-white/10 rounded-xl shadow-2xl">
-<div class="relative">
-<input class="w-full bg-transparent border-0 border-b border-white/30 py-4 focus:ring-0 focus:border-white placeholder:text-white/40 font-body-lg text-white" placeholder="Full Name" type="text">
 </div>
-<div class="relative">
-<input class="w-full bg-transparent border-0 border-b border-white/30 py-4 focus:ring-0 focus:border-white placeholder:text-white/40 font-body-lg text-white" placeholder="Email Address" type="email">
-</div>
-<div class="relative">
-<textarea class="w-full bg-transparent border-0 border-b border-white/30 py-4 focus:ring-0 focus:border-white placeholder:text-white/40 font-body-lg text-white resize-none" placeholder="Your Message" rows="3"></textarea>
-</div>
-<button class="w-full bg-white text-primary py-5 rounded-full font-label-md uppercase tracking-widest hover:scale-[1.02] active:scale-95 transition-all shadow-xl font-bold" type="submit">Submit Inquiry</button>
-</form>
 </div>
 <!-- Footer - Updated to match COMPONENTS_5 style -->
 <footer class="mt-auto pt-24 w-full z-10">
 <div class="w-full bg-surface-container py-12 px-margin-mobile md:px-margin-desktop">
-<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6"><div class="font-headline-lg text-primary text-[28px] tracking-tight">Thao Nguyen</div><p class="font-body-md text-on-surface-variant">© 2026 Thao Nguyen — Strategic Precision &amp; Organic Growth</p><div class="flex gap-10"><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#work">Work</a><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Insights</a><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#contact">Connect</a></div></div>
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6"><div class="font-headline-lg text-primary text-[28px] tracking-tight">Thao Nguyen</div><p class="font-body-md text-on-surface-variant">© 2026 Thao Nguyen — Strategic Precision &amp; Organic Growth</p><div class="flex gap-10"><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="work.html">Work</a><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="experience.html">Experience</a><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="connect.html">Connect</a></div></div>
 </div>
 </footer>
 </section>
